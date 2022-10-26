@@ -23,9 +23,6 @@ PROJECT_DIR		:=$(realpath ../)
 # Convenient variable to hold the path to the test directory.
 TESTS_DIR		:=$(realpath .)
 
-# Path to the cpputest home folder.
-CPPUTEST_HOME 	:=cpputest
-
 
 # Convenient variable to hold the test targets name.
 TEST_TARGET		:=libra_test

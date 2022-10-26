@@ -28,7 +28,8 @@ jobs:
       - run:
           name: Building Unit Tests 
           command: |
-            ls 
+            mkdir test 
+            cd test
                        
             # make -f Makefile libra_test
      # - run:

@@ -2,7 +2,7 @@ version: 2.1
 executors:
   master:
     docker:
-      - image: dawidblom/project:latest
+      - image: dawidblom/ci-cd:latest
 
 jobs:
   build:

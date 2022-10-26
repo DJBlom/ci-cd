@@ -4,9 +4,8 @@ executors:
     docker:
       - image: dawidblom/ci-cd:latest
         auth:
-          username: dawidblom
+          username: dawidblom 
           password: DRBlom2022@!
-
 
 jobs:
   build:
@@ -16,11 +15,9 @@ jobs:
       - run:
           name: Building Project
           command: |
-            echo "Hello World"
-          #  mkdir build
-          #  cd build
-          #  cmake -G "Unix Makefiles" ../
-          #  cmake --build ./ --config Debug --target main
+            mkdir build
+            cmake -S . -B build
+            cmake --build build
      # - run:
      #     name: Execute Main 
      #     command: ./build/main
@@ -31,8 +28,10 @@ jobs:
       - run:
           name: Building Unit Tests 
           command: |
-            echo "$(CPPUTEST_HOME)"
+            ls ~/project
+            
             #cd test
+            
             #make -f Makefile libra_test
      # - run:
           #name: Execute Unit Tests

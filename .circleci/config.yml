@@ -16,7 +16,6 @@ jobs:
           name: Building Project
           command: |
             mkdir build
-            cd build
             cmake -S . -B build
           #  cmake --build build
      # - run:

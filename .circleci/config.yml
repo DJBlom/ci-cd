@@ -18,7 +18,7 @@ jobs:
           command: |
             mkdir build
             cmake -S . -B build
-            cmake --build build
+          #  cmake --build build
      # - run:
      #     name: Execute Main 
      #     command: ./build/main
@@ -29,8 +29,8 @@ jobs:
       - run:
           name: Building Unit Tests 
           command: |
-            echo $CPPUTEST_HOME
-            #cd test
+            cd test
+            
             #make -f Makefile libra_test
      # - run:
           #name: Execute Unit Tests

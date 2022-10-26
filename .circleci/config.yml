@@ -2,7 +2,7 @@ version: 2.1
 executors:
   master:
     docker:
-      - image: dawidblom/project:latest
+      - image: dawidblom/ci-cd:latest
         auth:
           username: dawidblom 
           password: DRBlom2022@!
@@ -18,7 +18,7 @@ jobs:
             mkdir build
             cd build
             cmake -S . -B build
-            cmake --build build
+          #  cmake --build build
      # - run:
      #     name: Execute Main 
      #     command: ./build/main

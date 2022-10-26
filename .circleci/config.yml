@@ -18,9 +18,9 @@ jobs:
             mkdir build
             cmake -S . -B build
             cmake --build build
-     # - run:
-     #     name: Execute Main 
-     #     command: ./build/main
+      - run:
+          name: Execute Main 
+          command: ./build/main
   
   test:
     executor: master

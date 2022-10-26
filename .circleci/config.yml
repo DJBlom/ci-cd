@@ -2,10 +2,7 @@ version: 2.1
 executors:
   master:
     docker:
-      - image: dawidblom/ci-cd:latest
-        auth:
-          username: dawidblom 
-          password: DRBlom2022@! 
+      - image: dawidblom/project:latest
 
 jobs:
   build:

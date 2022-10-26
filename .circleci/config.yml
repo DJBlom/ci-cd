@@ -30,8 +30,7 @@ jobs:
           command: |
             mkdir test 
             cd test
-                       
-            # make -f Makefile libra_test
+            make 
      # - run:
           #name: Execute Unit Tests
           #command: ./test/libra_test -c -v

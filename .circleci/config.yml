@@ -16,13 +16,14 @@ jobs:
       - run:
           name: Building Project
           command: |
-            mkdir build
-            cd build
-            cmake -G "Unix Makefiles" ../
-            cmake --build ./ --config Debug --target main
-      - run:
-          name: Execute Main 
-          command: ./build/main
+            echo "Hello World"
+          #  mkdir build
+          #  cd build
+          #  cmake -G "Unix Makefiles" ../
+          #  cmake --build ./ --config Debug --target main
+     # - run:
+     #     name: Execute Main 
+     #     command: ./build/main
   
   test:
     executor: master

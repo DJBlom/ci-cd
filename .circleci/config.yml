@@ -17,7 +17,10 @@ jobs:
           name: Building Project
           command: |
             mkdir build
-            cmake -S . -B build
+            cd build
+            cmake ..
+            make
+          #  cmake -S . -B build
           #  cmake --build build
      # - run:
      #     name: Execute Main 
@@ -29,7 +32,9 @@ jobs:
       - run:
           name: Building Unit Tests 
           command: |
-            cd test
+            ls -la
+            
+            #cd test
             
             #make -f Makefile libra_test
      # - run:

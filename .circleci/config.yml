@@ -4,9 +4,8 @@ executors:
     docker:
       - image: dawidblom/ci-cd:latest
         auth:
-          username: dawidblom
-          password: DRBlom2022@!
-
+          username: $DOCKERHUB_USERNAME 
+          password: $DOCKERHUB_PASSWORD
 
 jobs:
   build:

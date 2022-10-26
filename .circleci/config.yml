@@ -4,7 +4,7 @@ executors:
     docker:
       - image: dawidblom/ci-cd:latest
         auth:
-          username: dawidblom
+          username: dawidjblom@gmail.com
           password: BlOm@1Dj
 
 jobs:

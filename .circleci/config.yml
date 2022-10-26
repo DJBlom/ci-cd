@@ -3,6 +3,9 @@ executors:
   master:
     docker:
       - image: dawidblom/ci-cd:latest
+        auth:
+          username: dawidblom
+          password: DRBlom2022@!
 
 
 jobs:
@@ -13,15 +16,14 @@ jobs:
       - run:
           name: Building Project
           command: |
-            ls
-            pwd
-            mkdir build
-            cd build
-            cmake -G "Unix Makefiles" ../
-            cmake --build ./ --config Debug --target main
-      - run:
-          name: Execute Main 
-          command: ./build/main
+            echo "Hello World"
+          #  mkdir build
+          #  cd build
+          #  cmake -G "Unix Makefiles" ../
+          #  cmake --build ./ --config Debug --target main
+     # - run:
+     #     name: Execute Main 
+     #     command: ./build/main
   
   test:
     executor: master
@@ -29,11 +31,12 @@ jobs:
       - run:
           name: Building Unit Tests 
           command: |
-            cd test
-            make -f Makefile libra_test
-      - run:
-          name: Execute Unit Tests
-          command: ./test/libra_test -c -v
+            echo "$CPPUTEST_HOME"
+            #cd test
+            #make -f Makefile libra_test
+     # - run:
+          #name: Execute Unit Tests
+          #command: ./test/libra_test -c -v
 workflows:
   version: 2
   build:

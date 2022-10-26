@@ -17,7 +17,8 @@ jobs:
           command: |
             mkdir build
             cmake -S . -B build
-            cmake --build build
+            ls build/
+           # cmake --build build
      # - run:
      #     name: Execute Main 
      #     command: ./build/main

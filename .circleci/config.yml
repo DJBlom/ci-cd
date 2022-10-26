@@ -1,0 +1,42 @@
+version: 2.1
+executors:
+  master:
+    docker:
+      - image: dawidblom/project:latest
+
+
+jobs:
+  build:
+    executor: master
+    steps:
+      - checkout
+      - run:
+          name: Building Project
+          command: |
+            ls
+            pwd
+            mkdir build
+            cd build
+            cmake -G "Unix Makefiles" ../
+            cmake --build ./ --config Debug --target main
+      - run:
+          name: Execute Main 
+          command: ./build/main
+  
+ #test:
+    #executor: master
+    #steps:
+    #  - run:
+    #      name: Building Unit Tests 
+    #      command: |
+    #        cd unit_test
+    #        make -f Makefile libra_test
+    #  - run:
+    #      name: Execute Unit Tests
+    #      command: ./unit_test/libra_test -c -v
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+     # - test

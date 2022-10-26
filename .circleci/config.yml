@@ -17,9 +17,8 @@ jobs:
           name: Building Project
           command: |
             mkdir build
-            cd build
-            cmake -G "Unix Makefiles" ../
-            cmake --build . --config Debug --target main
+            cmake -S . -B build
+            cmake --build build
      # - run:
      #     name: Execute Main 
      #     command: ./build/main

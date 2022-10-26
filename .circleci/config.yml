@@ -12,8 +12,6 @@ jobs:
       - run:
           name: Building Project
           command: |
-            ls
-            pwd
             mkdir build
             cd build
             cmake -G "Unix Makefiles" ../

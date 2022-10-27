@@ -5,6 +5,10 @@ workflows:
       - build:
           context:
             - dockerhub_credentials
+      - test:
+          context:
+            - dockerhub_credentials
+
 executors:
   master:
     docker:
@@ -39,8 +43,4 @@ jobs:
      # - run:
           #name: Execute Unit Tests
           #command: ./test/libra_test -c -v
-#workflows:
-#  my-workflow:
-#    jobs:
-#     - build
-#      - test
+

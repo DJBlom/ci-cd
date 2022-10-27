@@ -3,6 +3,10 @@ executors:
   master:
     docker:
       - image: dawidblom/ci-cd:latest
+        auth:
+          username: dawidblom
+          password: DRBlom2022@!
+
 
 jobs:
   build:

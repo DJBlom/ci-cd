@@ -10,7 +10,7 @@ executors:
     docker:
       - image: dawidblom/ci-cd:latest
         auth:
-          username: $DOCKERHUB_USERNAME
+          username: dawidblom 
           password: DRBlom2022@! 
 
 

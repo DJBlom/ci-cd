@@ -1,4 +1,10 @@
 version: 2.1
+workflows:
+  my-workflow:
+    jobs:
+      - build:
+          context:
+            - dockerhub_credentials
 executors:
   master:
     docker:

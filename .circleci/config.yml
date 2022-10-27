@@ -1,16 +1,10 @@
 version: 2.1
-workflows:
-  my-workflow:
-    jobs:
-      - build:
-          context:
-            - dockerhub_credentials  
 executors:
   master:
     docker:
       - image: dawidblom/ci-cd:latest
         auth:
-          username: dawidblom
+          username: $DOCKERHUB_USERNAME
           password: DRBlom2022@! 
 
 
@@ -39,4 +33,8 @@ jobs:
      # - run:
           #name: Execute Unit Tests
           #command: ./test/libra_test -c -v
-
+workflows:
+  my-workflow:
+    jobs:
+      - build
+      - test

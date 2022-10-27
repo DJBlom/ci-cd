@@ -43,7 +43,7 @@ jobs:
             cd test
             echo $(pwd)  
             
-            #$CPPUTEST_HOME
+            echo $(CPPUTEST_HOME)
             #make -f Makefile libra_test
      # - run:
           #name: Execute Unit Tests

@@ -5,7 +5,7 @@ executors:
       - image: dawidblom/ci-cd:latest
         auth:
           username: dawidblom
-          password: DRBlom2022@!
+          password: $DOCKERHUB_ACCESS_TOKEN
 
 
 jobs:
@@ -29,9 +29,7 @@ jobs:
       - run:
           name: Building Unit Tests 
           command: |
-            mkdir test 
-            cd test
-            make 
+            make -f Makefile libra_test
      # - run:
           #name: Execute Unit Tests
           #command: ./test/libra_test -c -v

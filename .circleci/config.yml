@@ -11,7 +11,7 @@ executors:
       - image: dawidblom/ci-cd:latest
         auth:
           username: dawidblom
-          password: $DOCKERHUB_PASSWORD
+          password: DRBlom2022@! 
 
 
 jobs:

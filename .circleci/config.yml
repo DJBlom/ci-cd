@@ -21,7 +21,6 @@ executors:
 jobs:
   build:
     executor: master
-    working_directory: ~/ci-cd
     steps:
       - checkout
       - run:
@@ -37,6 +36,7 @@ jobs:
   test:
     executor: master
     steps:
+      - checkout
       - run:
           name: Building Unit Tests 
           command: |

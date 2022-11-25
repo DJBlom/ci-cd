@@ -44,7 +44,7 @@ jobs:
             
             #cd test
             #make -f Makefile libra_test
-      - run:
-          name: Execute Unit Tests
-          command: ./test/libra_test -c -v
+      #- run:
+      #    name: Execute Unit Tests
+      #    command: ./test/libra_test -c -v
 

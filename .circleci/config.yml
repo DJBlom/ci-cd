@@ -41,11 +41,8 @@ jobs:
           name: Building Unit Tests 
           command: |
             cd test
-            echo "$(whereis cpputest)"
-            echo $PATH
-          #  echo $CPPUTEST_HOME
-          #  make -f Makefile libra_test
-     # - run:
-          #name: Execute Unit Tests
-          #command: ./test/libra_test -c -v
+            make -f Makefile libra_test
+      - run:
+          name: Execute Unit Tests
+          command: ./test/libra_test -c -v
 

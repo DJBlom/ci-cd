@@ -41,9 +41,7 @@ jobs:
           name: Building Unit Tests 
           command: |
             cd test
-            cat ~/.bashrc
-            
-            #make -f Makefile libra_test
+            make -f Makefile libra_test
       #- run:
       #    name: Execute Unit Tests
       #    command: ./test/libra_test -c -v

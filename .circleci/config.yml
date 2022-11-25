@@ -42,7 +42,7 @@ jobs:
           command: |
             cd test
             echo $PATH
-            #make -f Makefile libra_test
+            make -f Makefile libra_test
       #- run:
       #    name: Execute Unit Tests
       #    command: ./test/libra_test -c -v

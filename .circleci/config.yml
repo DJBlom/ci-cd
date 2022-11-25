@@ -41,7 +41,7 @@ jobs:
           name: Building Unit Tests 
           command: |
             cd test
-            echo $(pwd)
+            ls -la
             
             #make -f Makefile libra_test
       #- run:

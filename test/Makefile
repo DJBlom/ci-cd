@@ -14,6 +14,8 @@
 # 				specifications.
 ########################################################
 
+CPPUTEST_HOME := /cpputest
+
 # Silent the output of the makefile
 SILENCE := @
 

@@ -42,6 +42,7 @@ jobs:
           command: |
             cd test
             ls -la
+            echo $CPPUTEST_HOME
             
             #make -f Makefile libra_test
       #- run:

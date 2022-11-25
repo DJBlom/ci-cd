@@ -41,8 +41,7 @@ jobs:
           name: Building Unit Tests 
           command: |
             cd test
-            ls -la
-            ls /cpputest
+            cat ~/.bashrc
             
             #make -f Makefile libra_test
       #- run:

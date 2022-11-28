@@ -42,7 +42,7 @@ jobs:
           command: |
             cd test
             make -s
-            make -f Makefile libra_test
+          #  make -f Makefile libra_test
       - run:
           name: Code Coverage
           command: |

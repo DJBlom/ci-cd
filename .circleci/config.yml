@@ -46,8 +46,10 @@ jobs:
           name: Code Coverage
           command: |
             echo "Hello gcov"
-            #cd test
-            make gcov
+            ls
+            cd test
+            ls
+            #make gcov
 
       - run:
           name: Execute Unit Tests

@@ -37,11 +37,19 @@ jobs:
     executor: master
     steps:
       - checkout
+      - persist_to_workspace:
+          root: test/
+          paths:
+            - .
       - run:
-          name: Building Unit Tests 
+          name: Unit Tests 
           command: |
-            cd test
             make -f Makefile libra_test
+      - run:
+          name: Code Coverage
+          command: |
+            make gcov
+
       - run:
           name: Execute Unit Tests
           command: ./test/libra_test -c -v

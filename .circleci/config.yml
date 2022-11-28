@@ -41,15 +41,12 @@ jobs:
           name: Unit Tests 
           command: |
             cd test
-            make -f Makefile libra_test
+            make -s
+          #  make -f Makefile libra_test
       - run:
           name: Code Coverage
           command: |
-            echo "Hello gcov"
-            ls
-            cd test
-            ls
-            #make gcov
+            make gcov
 
       - run:
           name: Execute Unit Tests

@@ -48,7 +48,7 @@ jobs:
           command: |
             cd test
             make gcov
-            cat gcov/gcov_report.txt
+            #cat gcov/gcov_report.txt
 
       - run:
           name: Execute Unit Tests

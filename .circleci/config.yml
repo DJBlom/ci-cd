@@ -38,7 +38,7 @@ jobs:
     steps:
       - checkout
       - persist_to_workspace:
-          root: test/
+          root: /project/test/
           paths:
             - .
       - run:

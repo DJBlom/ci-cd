@@ -34,13 +34,10 @@ jobs:
           command: ./build/main
   
   test:
+    working_directory: ~/project/test
     executor: master
     steps:
-      - checkout
-      - persist_to_workspace:
-          root: /project/test/
-          paths:
-            - .
+      - checkout  
       - run:
           name: Unit Tests 
           command: |
@@ -49,6 +46,7 @@ jobs:
           name: Code Coverage
           command: |
             make gcov
+            cat gcov/gcov_report.txt
 
       - run:
           name: Execute Unit Tests

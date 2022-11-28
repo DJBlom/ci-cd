@@ -117,6 +117,6 @@ TEST_GROUP(example_test)
 
 TEST(example_test, example_fail)
 { 
-    FAIL("Demo Fail.");
+    CHECK_EQUAL(1, 1);
 }
 

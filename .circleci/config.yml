@@ -34,7 +34,7 @@ jobs:
           command: ./build/main
   
   test:
-    working_directory: ~/project/test
+  #  working_directory: ~/project/test
     executor: master
     steps:
       - checkout  
@@ -46,9 +46,9 @@ jobs:
       - run:
           name: Code Coverage
           command: |
-            cd test
-            make gcov
-            #cat gcov/gcov_report.txt
+            echo "Hello gcov"
+#            cd test
+#            make gcov
 
       - run:
           name: Execute Unit Tests

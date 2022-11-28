@@ -41,10 +41,12 @@ jobs:
       - run:
           name: Unit Tests 
           command: |
+            cd test
             make -f Makefile libra_test
       - run:
           name: Code Coverage
           command: |
+            cd test
             make gcov
             cat gcov/gcov_report.txt
 

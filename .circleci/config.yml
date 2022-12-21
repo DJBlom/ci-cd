@@ -54,4 +54,4 @@ jobs:
       - run:
           name: Static Code Analysis
           command: |
-            cppCheck --enable=all --std=c++11 --suppress=missingIncludeSystem /project/main.cpp
+            cppCheck --enable=all --std=c++11 --suppress=missingIncludeSystem main.cpp

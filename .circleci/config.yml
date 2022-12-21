@@ -47,8 +47,11 @@ jobs:
           command: |
             cd test
             make gcov
-
       - run:
           name: Execute Unit Tests
           command: ./test/libra_test -c -v
 
+      - run:
+          name: Static Code Analysis
+          command: |
+            cppCheck --enable=all --std=c++11 --suppress=missingIncludeSystem /project/main.cpp
